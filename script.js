@@ -21,6 +21,7 @@ function displayMovieList(url){
     fetch(url).then(response => response.json()).then(function(data)
     {
 
+// forEach loops through each element to update the values
     data.results.forEach(element => {
         let newDivElement = document.createElement('div');
         let movieTitleText = document.createElement('h2');

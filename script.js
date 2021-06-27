@@ -4,6 +4,9 @@ let searchBox = document.querySelector('.search-box');
 let searchButton = document.querySelector('.search-button');
 let movieInfo = document.querySelector('.movie-info');
 
+
+
+
 // Used this link to get the URLs: https://www.themoviedb.org/talk/60d88586b7fbbd0080974113#60d88586b7fbbd0080974116
 // API key = 956679ad57b0b5ed73d5db018b622a7d
 let searchApi =
@@ -40,29 +43,24 @@ searchButton.addEventListener('click', (event) => {
     // console.log(searchBox.value);
     // searchBox.value (searchCharacterInput) will show an empty string '' 
     let searchCharacterInput = searchBox.value;
-    // Making movieInfo empty
     movieInfo.innerText = null;
+
     if (searchCharacterInput) {
         searchBox.value === null;
-        // Executes displayMovieList function to show API search and the input that's searched 
         displayMovieList(`${searchApi}${searchCharacterInput}`);
-        
     }
 });
 
 // This submit event ensures that when the user presses 'return' or 'enter', the displayMovieList function is run
 
 searchContainer.addEventListener('submit', (event) => {
-    // searchBox.value (searchCharacterInput) will show an empty string '' 
+     
     let searchCharacterInput = searchBox.value;
-    // Making movieInfo empty
     movieInfo.innerText = null;
-    // preventDefault() cancels event if it's empty
     event.preventDefault();
 
     if (searchCharacterInput) {
         searchBox.value === null;
-        // Executes displayMovieList function to show API search and the input that's searched 
         displayMovieList(`${searchApi}${searchCharacterInput}`);
     }
 });

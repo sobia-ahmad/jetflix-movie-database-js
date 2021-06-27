@@ -4,9 +4,6 @@ let searchBox = document.querySelector('.search-box');
 let searchButton = document.querySelector('.search-button');
 let movieInfo = document.querySelector('.movie-info');
 
-
-
-
 // Used this link to get the URLs: https://www.themoviedb.org/talk/60d88586b7fbbd0080974113#60d88586b7fbbd0080974116
 // API key = 956679ad57b0b5ed73d5db018b622a7d
 let searchApi =
